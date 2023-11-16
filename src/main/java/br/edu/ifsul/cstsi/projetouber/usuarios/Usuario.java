@@ -1,6 +1,7 @@
-package br.edu.ifsul.cstsi.projetouber.model;
+package br.edu.ifsul.cstsi.projetouber.usuarios;
 
 
+import br.edu.ifsul.cstsi.projetouber.corridas.Corrida;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

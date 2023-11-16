@@ -1,5 +1,7 @@
-package br.edu.ifsul.cstsi.projetouber.model;
+package br.edu.ifsul.cstsi.projetouber.corridas;
 
+import br.edu.ifsul.cstsi.projetouber.motoristas.Motorista;
+import br.edu.ifsul.cstsi.projetouber.usuarios.Usuario;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package br.edu.ifsul.cstsi.projetouber.model;
+package br.edu.ifsul.cstsi.projetouber.veiculos;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
