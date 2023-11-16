@@ -1,2 +1,2 @@
 # lpoo-projeto
-![imagem Classes](Diagrama_Classes.jpg)
+![imagem Classes](Diagrama_Classe.jpg)
