@@ -9,9 +9,7 @@ import java.util.stream.LongStream;
 
 public interface MotoristaRepository extends JpaRepository<Motorista, Long> {
 
-    @Query(value = "Select m from Motoristas m where m.nome like ?")
+    @Query(value = "Select m from Motoristas m where m.nome like ?1")
     List<Motorista> findByNome(String nome);
 
-    @Query(value = "Select m from Motoristas m where m.id = ?")
-    Optional<Motorista> findById(Long id);
 }

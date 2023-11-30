@@ -36,8 +36,8 @@ public class MotoristaController {
                 case 1 -> inserirMotorista();
                 case 2 -> atualizarMotorista();
                 case 3 -> excluirMotorista();
-                case 4 -> ListaMotorista();
-                case 5 -> BuscarPeloNome();
+                case 4 -> listaMotorista();
+                case 5 -> buscarPeloNome();
                 default -> {
                     if (opcao != 0){
                         System.out.println("Opção Invalida");
@@ -46,5 +46,26 @@ public class MotoristaController {
             }
         }while(opcao != 0);
     }
+
+    private static void inserirMotorista(){
+        Motorista motorista = new Motorista();
+        System.out.println("\n//////////// Cadastra novo Motorista ////////////");
+        System.out.println("Digite nome do Motorista: ");
+        motorista.setNome(input.nextLine());
+        System.out.println("\nDigite email do Motorista: ");
+        motorista.setEmail(input.nextLine());
+        System.out.println("\nDigite o telefone do Motorista:");
+        motorista.setTelefone(input.nextLine());
+        System.out.println("Motorista inserido com sucesso:" + MotoristaService.insert(motorista));
+
+    }
+
+    private static void atualizarMotorista(){}
+
+    private static void excluirMotorista(){}
+
+    private static void listaMotorista(){}
+
+    private static void buscarPeloNome(){}
 
 }

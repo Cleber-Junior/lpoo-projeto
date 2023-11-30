@@ -14,10 +14,13 @@ public class MotoristaService {
     @Autowired
     private MotoristaRepository rep;
 
+    //Listagem
     public List<Motorista> getMotorista(){
         return rep.findAll();
     }
 
+
+    //Selecionar pelo ID
     public Motorista getMotoristaById(Long id){
         Optional<Motorista> optional = rep.findById(id);
         if(optional.isPresent()){
@@ -26,15 +29,18 @@ public class MotoristaService {
         return null;
     }
 
+    //Selecionar pelo Nome
     public List<Motorista> getMotoristaByNome(String nome){
         return new ArrayList<>(rep.findByNome(nome + "%"));
     }
 
+    //Inserir Motorista
     public Motorista insert(Motorista motorista) {
         Assert.isNull(motorista.getId(),"Não foi possível inserir o registro");
         return rep.save(motorista);
     }
 
+    //Atualizar motorista
     public Motorista update(Motorista motorista){
         Assert.notNull(motorista.getId(), "Não foi possivel atualizar o registro");
 
@@ -55,6 +61,7 @@ public class MotoristaService {
         }
     }
 
+    //Deletar motorista
     public void delete(Long id){
         rep.deleteById(id);
     }
